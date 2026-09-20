@@ -1,0 +1,1205 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="utf-8">
+
+<title>Inventario - UAH</title>
+
+<style>
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fa;
+    margin: 0;
+}
+
+header {
+    background: #2563eb;
+    color: white;
+    padding: 15px 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.resumen{
+    display:flex;
+    gap:15px;
+    margin-bottom:20px;
+}
+
+.card-resumen{
+    background:white;
+    padding:15px 20px;
+    border-radius:8px;
+    box-shadow:0 2px 4px rgba(0,0,0,.08);
+    min-width:150px;
+    text-align: center;
+}
+
+.card-resumen span{
+    display:block;
+    color:#666;
+    font-size:13px;
+}
+
+.card-resumen strong{
+    font-size:28px;
+    color:#38bdf8;
+}
+
+#buscar{
+    width:100%;
+    max-width:400px;
+    padding:10px;
+    margin-bottom:20px;
+    border:1px solid #ccc;
+    border-radius:6px;
+}
+
+th{
+    cursor:pointer;
+    position:sticky;
+    top:0;
+    z-index:5;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+th {
+    background: #f3f4f6;
+}
+
+tr:hover {
+    background: #f9fafb;
+}
+
+.navegacion {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+.btn-nav {
+    display: inline-block;
+    padding: 10px 15px;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.btn-nav:hover {
+    background: #1d4ed8;
+}
+
+.btn-nav:visited {
+    color: white;
+}
+
+.nav-header {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.nav-header a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    border: 1px solid rgba(255,255,255,.4);
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.nav-header a:hover {
+    background: rgba(255,255,255,.15);
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>Inventario de Impresoras - UAH</h1>
+
+<div class="nav-header">
+
+<a href="index.html">🏠 Inicio</a>
+
+<a href="alertas.html">⚠️ Alertas</a>
+
+<a href="instalaciones.html">🔧 Instalaciones</a>
+
+</div>
+
+</header>
+
+<div class="container">
+
+<input
+    type="text"
+    id="buscar"
+    placeholder="🔍 Buscar equipo, serie, modelo o IP..."
+>
+
+<table id="tabla">
+
+<thead>
+
+<tr>
+<th onclick="ordenarTabla(0)">#</th>
+<th onclick="ordenarTabla(1)">Nombre ↕</th>
+<th onclick="ordenarTabla(2)">Serie ↕</th>
+<th onclick="ordenarTabla(3)">Modelo ↕</th>
+<th onclick="ordenarTabla(4)">IP ↕</th>
+<th onclick="ordenarTabla(5)">Negro ↕</th>
+<th onclick="ordenarTabla(6)">Color ↕</th>
+<th onclick="ordenarTabla(7)">Total ↕</th>
+<th onclick="ordenarTabla(8)">Estado ↕</th>
+<th onclick="ordenarTabla(9)">Última lectura</th>
+</tr>
+
+</thead>
+
+
+
+<tbody>
+
+
+            <tr>
+            <td>1</td>
+            <td>Campus B 1er piso</td>
+            <td><a href="UAH-3399951754.html">3399951754</a></td>
+            <td>Xerox VersaLink B7030</td>
+            <td>172.16.81.149</td>
+            <td>99.934</td>
+            <td>-</td>
+            <td>99.934</td>
+            <td>🟢</td>
+            <td>20-09-2026 19:00:11</td>
+            </tr>
+            
+            <tr>
+            <td>2</td>
+            <td>Campus_B_piso6</td>
+            <td><a href="UAH-3384969746.html">3384969746</a></td>
+            <td>Xerox Phaser 3330</td>
+            <td>172.16.81.30</td>
+            <td>9.026</td>
+            <td>-</td>
+            <td>9.026</td>
+            <td>🟢</td>
+            <td>20-09-2026 19:00:13</td>
+            </tr>
+            
+            <tr>
+            <td>3</td>
+            <td>Modulo 4</td>
+            <td><a href="UAH-3351396805.html">3351396805</a></td>
+            <td>Xerox VersaLink B400</td>
+            <td>172.16.81.64</td>
+            <td>383.446</td>
+            <td>-</td>
+            <td>383.446</td>
+            <td>🟢</td>
+            <td>20-09-2026 19:00:15</td>
+            </tr>
+            
+            <tr>
+            <td>4</td>
+            <td>Central de Apuntes</td>
+            <td><a href="UAH-3391871700.html">3391871700</a></td>
+            <td>Xerox VersaLink C7025</td>
+            <td>172.16.79.50</td>
+            <td>59.517</td>
+            <td>303.625</td>
+            <td>363.142</td>
+            <td>🟢</td>
+            <td>20-09-2026 18:59:09</td>
+            </tr>
+            
+            <tr>
+            <td>5</td>
+            <td>DIRECCION DE GESTION Y DESARROLLO</td>
+            <td><a href="UAH-3353184511.html">3353184511</a></td>
+            <td>Xerox WorkCentre 3655S v1</td>
+            <td>172.16.79.100</td>
+            <td>43.828</td>
+            <td>-</td>
+            <td>43.828</td>
+            <td>🟢</td>
+            <td>20-09-2026 18:58:16</td>
+            </tr>
+            
+            <tr>
+            <td>6</td>
+            <td>Modulo1</td>
+            <td><a href="UAH-3390576217.html">3390576217</a></td>
+            <td>Xerox VersaLink B7025</td>
+            <td>172.16.79.124</td>
+            <td>1.140.404</td>
+            <td>-</td>
+            <td>1.140.404</td>
+            <td>🟢</td>
+            <td>20-09-2026 18:58:17</td>
+            </tr>
+            
+            <tr>
+            <td>7</td>
+            <td>DIPER</td>
+            <td><a href="UAH-3384970914.html">3384970914</a></td>
+            <td>Xerox Phaser 3330</td>
+            <td>172.16.79.146</td>
+            <td>27.627</td>
+            <td>-</td>
+            <td>27.627</td>
+            <td>🟢</td>
+            <td>20-09-2026 18:58:18</td>
+            </tr>
+            
+            <tr>
+            <td>8</td>
+            <td>DirecciÃ³n de Finanzas</td>
+            <td><a href="UAH-3223580865.html">3223580865</a></td>
+            <td>Xerox Phaser 3320</td>
+            <td>172.16.79.148</td>
+            <td>20.014</td>
+            <td>-</td>
+            <td>20.014</td>
+            <td>🟢</td>
+            <td>20-09-2026 18:58:19</td>
+            </tr>
+            
+            <tr>
+            <td>9</td>
+            <td>Vicerectoria de Adm y Finanzas</td>
+            <td><a href="UAH-3940616670.html">3940616670</a></td>
+            <td>Xerox VersaLink B605</td>
+            <td>172.16.79.20</td>
+            <td>139.352</td>
+            <td>-</td>
+            <td>139.352</td>
+            <td>🟢</td>
+            <td>20-09-2026 18:58:22</td>
+            </tr>
+            
+            <tr>
+            <td>10</td>
+            <td>Finanzas, Alameda 1845 piso 3</td>
+            <td><a href="UAH-3399945932.html">3399945932</a></td>
+            <td>Xerox VersaLink B7030</td>
+            <td>172.16.79.21</td>
+            <td>28.457</td>
+            <td>-</td>
+            <td>28.457</td>
+            <td>🟢</td>
+            <td>20-09-2026 18:58:25</td>
+            </tr>
+            
+            <tr>
+            <td>11</td>
+            <td>PMI ( Plan de Mejoramiento Int.)</td>
+            <td><a href="UAH-3940617056.html">3940617056</a></td>
+            <td>Xerox VersaLink B605</td>
+            <td>172.16.79.23</td>
+            <td>104.253</td>
+            <td>-</td>
+            <td>104.253</td>
+            <td>🟢</td>
+            <td>20-09-2026 18:58:26</td>
+            </tr>
+            
+            <tr>
+            <td>12</td>
+            <td>DARA 2do piso</td>
+            <td><a href="UAH-3399945967.html">3399945967</a></td>
+            <td>Xerox VersaLink B7030</td>
+            <td>172.16.79.24</td>
+            <td>39.301</td>
+            <td>-</td>
+            <td>39.301</td>
+            <td>🟢</td>
+            <td>20-09-2026 18:58:28</td>
+            </tr>
+            
+            <tr>
+            <td>13</td>
+            <td>08.- DAE</td>
+            <td><a href="UAH-3940616424.html">3940616424</a></td>
+            <td>Xerox VersaLink B605</td>
+            <td>172.16.79.25</td>
+            <td>218.765</td>
+            <td>-</td>
+            <td>218.765</td>
+            <td>🟢</td>
+            <td>20-09-2026 18:58:30</td>
+            </tr>
+            
+            <tr>
+            <td>14</td>
+            <td>05.- CUI</td>
+            <td><a href="UAH-3394992134.html">3394992134</a></td>
+            <td>Xerox VersaLink B605</td>
+            <td>172.16.79.26</td>
+            <td>80.713</td>
+            <td>-</td>
+            <td>80.713</td>
+            <td>🟢</td>
+            <td>20-09-2026 18:58:31</td>
+            </tr>
+            
+            <tr>
+            <td>15</td>
+            <td> Asuntos Estudiantiles Recepcion</td>
+            <td><a href="UAH-3940616556.html">3940616556</a></td>
+            <td>Xerox VersaLink B605</td>
+            <td>172.16.79.27</td>
+            <td>25.028</td>
+            <td>-</td>
+            <td>25.028</td>
+            <td>🟢</td>
+            <td>20-09-2026 18:58:33</td>
+            </tr>
+            
+            <tr>
+            <td>16</td>
+            <td>DARA_COLOR</td>
+            <td><a href="UAH-3770720973.html">3770720973</a></td>
+            <td>Xerox VersaLink C9000</td>
+            <td>172.16.79.28</td>
+            <td>111.030</td>
+            <td>18.832</td>
+            <td>129.862</td>
+            <td>🟢</td>
+            <td>20-09-2026 18:58:34</td>
+            </tr>
+            
+            <tr>
+            <td>17</td>
+            <td>DARA 1er piso</td>
+            <td><a href="UAH-3940617064.html">3940617064</a></td>
+            <td>Xerox VersaLink B605</td>
+            <td>172.16.79.29</td>
+            <td>203.213</td>
+            <td>-</td>
+            <td>203.213</td>
+            <td>🟢</td>
+            <td>20-09-2026 18:58:40</td>
+            </tr>
+            
+            <tr>
+            <td>18</td>
+            <td>DARA</td>
+            <td><a href="UAH-3399952378.html">3399952378</a></td>
+            <td>Xerox VersaLink B7030</td>
+            <td>172.16.79.30</td>
+            <td>51.560</td>
+            <td>-</td>
+            <td>51.560</td>
+            <td>🟢</td>
+            <td>20-09-2026 18:58:42</td>
+            </tr>
+            
+            <tr>
+            <td>19</td>
+            <td>Rectoria Color</td>
+            <td><a href="UAH-3358981312.html">3358981312</a></td>
+            <td>Xerox VersaLink C405</td>
+            <td>172.16.79.31</td>
+            <td>3.668</td>
+            <td>9.347</td>
+            <td>13.015</td>
+            <td>🟢</td>
+            <td>20-09-2026 18:58:43</td>
+            </tr>
+            
+            <tr>
+            <td>20</td>
+            <td>02.- Rectoria</td>
+            <td><a href="UAH-3394991545.html">3394991545</a></td>
+            <td>Xerox VersaLink B605</td>
+            <td>172.16.79.32</td>
+            <td>94.543</td>
+            <td>-</td>
+            <td>94.543</td>
+            <td>🟢</td>
+            <td>20-09-2026 18:58:46</td>
+            </tr>
+            
+            <tr>
+            <td>21</td>
+            <td>Direccion de Biblioteca</td>
+            <td><a href="UAH-3940618222.html">3940618222</a></td>
+            <td>Xerox VersaLink B605</td>
+            <td>172.16.79.33</td>
+            <td>55.508</td>
+            <td>-</td>
+            <td>55.508</td>
+            <td>🟢</td>
+            <td>20-09-2026 18:58:47</td>
+            </tr>
+            
+            <tr>
+            <td>22</td>
+            <td>03.- CIDE</td>
+            <td><a href="UAH-3394991685.html">3394991685</a></td>
+            <td>Xerox VersaLink B605</td>
+            <td>172.16.79.34</td>
+            <td>320.759</td>
+            <td>-</td>
+            <td>320.759</td>
+            <td>🟢</td>
+            <td>20-09-2026 18:58:50</td>
+            </tr>
+            
+            <tr>
+            <td>23</td>
+            <td>11.- Pastoral</td>
+            <td><a href="UAH-3940616505.html">3940616505</a></td>
+            <td>Xerox VersaLink B605</td>
+            <td>172.16.79.35</td>
+            <td>34.232</td>
+            <td>-</td>
+            <td>34.232</td>
+            <td>🟢</td>
+            <td>20-09-2026 18:58:51</td>
+            </tr>
+            
+            <tr>
+            <td>24</td>
+            <td>Facultad Educacion</td>
+            <td><a href="UAH-3714669752.html">3714669752</a></td>
+            <td>Xerox VersaLink B405</td>
+            <td>172.16.79.36</td>
+            <td>157.097</td>
+            <td>-</td>
+            <td>157.097</td>
+            <td>🟢</td>
+            <td>20-09-2026 18:58:52</td>
+            </tr>
+            
+            <tr>
+            <td>25</td>
+            <td>10.- Doc. Educa</td>
+            <td><a href="UAH-3940616491.html">3940616491</a></td>
+            <td>Xerox VersaLink B605</td>
+            <td>172.16.79.37</td>
+            <td>158.415</td>
+            <td>-</td>
+            <td>158.415</td>
+            <td>🟢</td>
+            <td>20-09-2026 18:58:54</td>
+            </tr>
+            
+            <tr>
+            <td>26</td>
+            <td>Facultad de Musica</td>
+            <td><a href="UAH-3399944995.html">3399944995</a></td>
+            <td>Xerox VersaLink B7030</td>
+            <td>172.16.79.38</td>
+            <td>53.140</td>
+            <td>-</td>
+            <td>53.140</td>
+            <td>🟢</td>
+            <td>20-09-2026 18:58:56</td>
+            </tr>
+            
+            <tr>
+            <td>27</td>
+            <td>Facultad de Trabajo Social</td>
+            <td><a href="UAH-3940616548.html">3940616548</a></td>
+            <td>Xerox VersaLink B605</td>
+            <td>172.16.79.39</td>
+            <td>230.167</td>
+            <td>-</td>
+            <td>230.167</td>
+            <td>🟢</td>
+            <td>20-09-2026 18:58:57</td>
+            </tr>
+            
+            <tr>
+            <td>28</td>
+            <td>Facultad de Literatura</td>
+            <td><a href="UAH-3399945436.html">3399945436</a></td>
+            <td>Xerox VersaLink B7030</td>
+            <td>172.16.79.40</td>
+            <td>135.532</td>
+            <td>-</td>
+            <td>135.532</td>
+            <td>🟢</td>
+            <td>20-09-2026 18:58:58</td>
+            </tr>
+            
+            <tr>
+            <td>29</td>
+            <td>FilHum</td>
+            <td><a href="UAH-3940618842.html">3940618842</a></td>
+            <td>Xerox VersaLink B605</td>
+            <td>172.16.79.41</td>
+            <td>58.242</td>
+            <td>-</td>
+            <td>58.242</td>
+            <td>🟢</td>
+            <td>20-09-2026 18:58:59</td>
+            </tr>
+            
+            <tr>
+            <td>30</td>
+            <td>Facultad de Filosofia y Humanida</td>
+            <td><a href="UAH-3940616998.html">3940616998</a></td>
+            <td>Xerox VersaLink B605</td>
+            <td>172.16.79.42</td>
+            <td>172.580</td>
+            <td>-</td>
+            <td>172.580</td>
+            <td>🟢</td>
+            <td>20-09-2026 18:59:01</td>
+            </tr>
+            
+            <tr>
+            <td>31</td>
+            <td>instituto de Teologia y Estudios</td>
+            <td><a href="UAH-3940618834.html">3940618834</a></td>
+            <td>Xerox VersaLink B605</td>
+            <td>172.16.79.43</td>
+            <td>77.656</td>
+            <td>-</td>
+            <td>77.656</td>
+            <td>🟢</td>
+            <td>20-09-2026 18:59:02</td>
+            </tr>
+            
+            <tr>
+            <td>32</td>
+            <td>04.- Periodismo</td>
+            <td><a href="UAH-3394992100.html">3394992100</a></td>
+            <td>Xerox VersaLink B605</td>
+            <td>172.16.79.44</td>
+            <td>72.151</td>
+            <td>-</td>
+            <td>72.151</td>
+            <td>🟢</td>
+            <td>20-09-2026 18:59:04</td>
+            </tr>
+            
+            <tr>
+            <td>33</td>
+            <td>Facultad de Ciencias Sociales</td>
+            <td><a href="UAH-3399945975.html">3399945975</a></td>
+            <td>Xerox VersaLink B7030</td>
+            <td>172.16.79.45</td>
+            <td>258.433</td>
+            <td>-</td>
+            <td>258.433</td>
+            <td>🟢</td>
+            <td>20-09-2026 18:59:05</td>
+            </tr>
+            
+            <tr>
+            <td>34</td>
+            <td>DOP</td>
+            <td><a href="UAH-3399946181.html">3399946181</a></td>
+            <td>Xerox VersaLink B7030</td>
+            <td>172.16.79.46</td>
+            <td>134.202</td>
+            <td>-</td>
+            <td>134.202</td>
+            <td>🟢</td>
+            <td>20-09-2026 18:59:08</td>
+            </tr>
+            
+            <tr>
+            <td>35</td>
+            <td>LASER_UAH</td>
+            <td><a href="UAH-3669690826.html">3669690826</a></td>
+            <td>Xerox AltaLink B8075</td>
+            <td>172.16.79.51</td>
+            <td>1.309.162</td>
+            <td>-</td>
+            <td>1.309.162</td>
+            <td>🔴</td>
+            <td>20-09-2026 18:35:39</td>
+            </tr>
+            
+            <tr>
+            <td>36</td>
+            <td>Derecho - Clinica Juridica</td>
+            <td><a href="UAH-3399951738.html">3399951738</a></td>
+            <td>Xerox VersaLink B7030</td>
+            <td>172.16.79.52</td>
+            <td>722.297</td>
+            <td>-</td>
+            <td>722.297</td>
+            <td>🟢</td>
+            <td>20-09-2026 18:59:15</td>
+            </tr>
+            
+            <tr>
+            <td>37</td>
+            <td>Direccion de Admision Patio</td>
+            <td><a href="UAH-3399952017.html">3399952017</a></td>
+            <td>Xerox VersaLink B7030</td>
+            <td>172.16.79.53</td>
+            <td>96.082</td>
+            <td>-</td>
+            <td>96.082</td>
+            <td>🔴</td>
+            <td>17-09-2026 23:02:11</td>
+            </tr>
+            
+            <tr>
+            <td>38</td>
+            <td>DERECHO</td>
+            <td><a href="UAH-3399946262.html">3399946262</a></td>
+            <td>Xerox VersaLink B7030</td>
+            <td>172.16.79.54</td>
+            <td>761.786</td>
+            <td>-</td>
+            <td>761.786</td>
+            <td>🟢</td>
+            <td>20-09-2026 18:59:16</td>
+            </tr>
+            
+            <tr>
+            <td>39</td>
+            <td>01.- Ciencias Politica</td>
+            <td><a href="UAH-3940616270.html">3940616270</a></td>
+            <td>Xerox VersaLink B605</td>
+            <td>172.16.79.55</td>
+            <td>483.897</td>
+            <td>-</td>
+            <td>483.897</td>
+            <td>🟢</td>
+            <td>20-09-2026 18:59:19</td>
+            </tr>
+            
+            <tr>
+            <td>40</td>
+            <td>DARA-ADMISION</td>
+            <td><a href="UAH-3353215298.html">3353215298</a></td>
+            <td>Xerox WorkCentre 3655X v1</td>
+            <td>172.16.79.56</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>🟢</td>
+            <td>20-09-2026 18:59:21</td>
+            </tr>
+            
+            <tr>
+            <td>41</td>
+            <td>Facultad de Ingenieria</td>
+            <td><a href="UAH-3399952459.html">3399952459</a></td>
+            <td>Xerox VersaLink B7030</td>
+            <td>172.16.79.59</td>
+            <td>97.492</td>
+            <td>-</td>
+            <td>97.492</td>
+            <td>🟢</td>
+            <td>20-09-2026 18:59:27</td>
+            </tr>
+            
+            <tr>
+            <td>42</td>
+            <td>Vice de Investigacion y Postgrad</td>
+            <td><a href="UAH-3940617021.html">3940617021</a></td>
+            <td>Xerox VersaLink B605</td>
+            <td>172.16.79.62</td>
+            <td>166.741</td>
+            <td>-</td>
+            <td>166.741</td>
+            <td>🟢</td>
+            <td>20-09-2026 18:59:28</td>
+            </tr>
+            
+            <tr>
+            <td>43</td>
+            <td>Direccion de Docencia</td>
+            <td><a href="UAH-3399951533.html">3399951533</a></td>
+            <td>Xerox VersaLink B7030</td>
+            <td>172.16.79.63</td>
+            <td>148.162</td>
+            <td>-</td>
+            <td>148.162</td>
+            <td>🟢</td>
+            <td>20-09-2026 18:59:31</td>
+            </tr>
+            
+            <tr>
+            <td>44</td>
+            <td>Direccion de Aprendizaje Institu</td>
+            <td><a href="UAH-3940619229.html">3940619229</a></td>
+            <td>Xerox VersaLink B605</td>
+            <td>172.16.79.64</td>
+            <td>36.645</td>
+            <td>-</td>
+            <td>36.645</td>
+            <td>🟢</td>
+            <td>20-09-2026 18:59:33</td>
+            </tr>
+            
+            <tr>
+            <td>45</td>
+            <td>Facultad de Economia 2do piso</td>
+            <td><a href="UAH-3940618249.html">3940618249</a></td>
+            <td>Xerox VersaLink B605</td>
+            <td>172.16.79.65</td>
+            <td>86.379</td>
+            <td>-</td>
+            <td>86.379</td>
+            <td>🟢</td>
+            <td>20-09-2026 18:59:35</td>
+            </tr>
+            
+            <tr>
+            <td>46</td>
+            <td>Facultad Economia 1er piso</td>
+            <td><a href="UAH-3399943565.html">3399943565</a></td>
+            <td>Xerox VersaLink B7030</td>
+            <td>172.16.79.66</td>
+            <td>238.555</td>
+            <td>-</td>
+            <td>238.555</td>
+            <td>🟢</td>
+            <td>20-09-2026 18:59:36</td>
+            </tr>
+            
+            <tr>
+            <td>47</td>
+            <td>09.- Sub Economia</td>
+            <td><a href="UAH-3940616432.html">3940616432</a></td>
+            <td>Xerox VersaLink B605</td>
+            <td>172.16.79.67</td>
+            <td>118.595</td>
+            <td>-</td>
+            <td>118.595</td>
+            <td>🟢</td>
+            <td>20-09-2026 18:59:38</td>
+            </tr>
+            
+            <tr>
+            <td>48</td>
+            <td>Centro Uni. Ignaciano 2do piso</td>
+            <td><a href="UAH-3399952335.html">3399952335</a></td>
+            <td>Xerox VersaLink B7030</td>
+            <td>172.16.79.68</td>
+            <td>71.498</td>
+            <td>-</td>
+            <td>71.498</td>
+            <td>🟢</td>
+            <td>20-09-2026 18:59:40</td>
+            </tr>
+            
+            <tr>
+            <td>49</td>
+            <td>Direccion de Comunicaciones</td>
+            <td><a href="UAH-3940616696.html">3940616696</a></td>
+            <td>Xerox VersaLink B605</td>
+            <td>172.16.79.69</td>
+            <td>25.048</td>
+            <td>-</td>
+            <td>25.048</td>
+            <td>🟢</td>
+            <td>20-09-2026 18:59:43</td>
+            </tr>
+            
+            <tr>
+            <td>50</td>
+            <td>Facultad de Psicologia</td>
+            <td><a href="UAH-3399945398.html">3399945398</a></td>
+            <td>Xerox VersaLink B7030</td>
+            <td>172.16.79.70</td>
+            <td>279.601</td>
+            <td>-</td>
+            <td>279.601</td>
+            <td>🟢</td>
+            <td>20-09-2026 18:59:45</td>
+            </tr>
+            
+            <tr>
+            <td>51</td>
+            <td>06.- Psicologia Subterraneo</td>
+            <td><a href="UAH-3940616190.html">3940616190</a></td>
+            <td>Xerox VersaLink B605</td>
+            <td>172.16.79.71</td>
+            <td>21.578</td>
+            <td>-</td>
+            <td>21.578</td>
+            <td>🟢</td>
+            <td>20-09-2026 18:59:47</td>
+            </tr>
+            
+            <tr>
+            <td>52</td>
+            <td>Facultad de Geografia</td>
+            <td><a href="UAH-3399946009.html">3399946009</a></td>
+            <td>Xerox VersaLink B7030</td>
+            <td>172.16.79.72</td>
+            <td>92.897</td>
+            <td>-</td>
+            <td>92.897</td>
+            <td>🟢</td>
+            <td>20-09-2026 18:59:49</td>
+            </tr>
+            
+            <tr>
+            <td>53</td>
+            <td>Direccion de Extension 2do piso</td>
+            <td><a href="UAH-3356010522.html">3356010522</a></td>
+            <td>Xerox VersaLink C405</td>
+            <td>172.16.79.73</td>
+            <td>61.770</td>
+            <td>292.039</td>
+            <td>353.809</td>
+            <td>🟢</td>
+            <td>20-09-2026 18:59:50</td>
+            </tr>
+            
+            <tr>
+            <td>54</td>
+            <td>07.- SNIG</td>
+            <td><a href="UAH-3940616416.html">3940616416</a></td>
+            <td>Xerox VersaLink B605</td>
+            <td>172.16.79.74</td>
+            <td>11.570</td>
+            <td>-</td>
+            <td>11.570</td>
+            <td>🔴</td>
+            <td>16-09-2026 10:02:16</td>
+            </tr>
+            
+            <tr>
+            <td>55</td>
+            <td>TicsDesarrollo</td>
+            <td><a href="UAH-3384970868.html">3384970868</a></td>
+            <td>Xerox Phaser 3330</td>
+            <td>172.16.79.75</td>
+            <td>3.140</td>
+            <td>-</td>
+            <td>3.140</td>
+            <td>🟢</td>
+            <td>20-09-2026 18:59:53</td>
+            </tr>
+            
+            <tr>
+            <td>56</td>
+            <td>Decanato Facso</td>
+            <td><a href="UAH-3399950731.html">3399950731</a></td>
+            <td>Xerox VersaLink B7030</td>
+            <td>172.16.79.76</td>
+            <td>104.971</td>
+            <td>-</td>
+            <td>104.971</td>
+            <td>🟢</td>
+            <td>20-09-2026 18:59:54</td>
+            </tr>
+            
+            <tr>
+            <td>57</td>
+            <td>Antropologia</td>
+            <td><a href="UAH-3940616513.html">3940616513</a></td>
+            <td>Xerox VersaLink B605</td>
+            <td>172.16.79.77</td>
+            <td>652.036</td>
+            <td>-</td>
+            <td>652.036</td>
+            <td>🟢</td>
+            <td>20-09-2026 18:59:56</td>
+            </tr>
+            
+            <tr>
+            <td>58</td>
+            <td>Facultad de Psicologia 2do piso</td>
+            <td><a href="UAH-3940619199.html">3940619199</a></td>
+            <td>Xerox VersaLink B605</td>
+            <td>172.16.79.78</td>
+            <td>109.751</td>
+            <td>-</td>
+            <td>109.751</td>
+            <td>🟢</td>
+            <td>20-09-2026 18:59:57</td>
+            </tr>
+            
+            <tr>
+            <td>59</td>
+            <td>Sec_Educa</td>
+            <td><a href="UAH-3942937600.html">3942937600</a></td>
+            <td>Xerox VersaLink B7030</td>
+            <td>172.16.79.79</td>
+            <td>410.752</td>
+            <td>-</td>
+            <td>410.752</td>
+            <td>🟢</td>
+            <td>20-09-2026 19:00:00</td>
+            </tr>
+            
+            <tr>
+            <td>60</td>
+            <td>Modulo2</td>
+            <td><a href="UAH-3942939786.html">3942939786</a></td>
+            <td>Xerox VersaLink B7030</td>
+            <td>172.16.79.82</td>
+            <td>393.993</td>
+            <td>-</td>
+            <td>393.993</td>
+            <td>🟢</td>
+            <td>20-09-2026 19:00:01</td>
+            </tr>
+            
+            <tr>
+            <td>61</td>
+            <td>Modulo 3</td>
+            <td><a href="UAH-3940636271.html">3940636271</a></td>
+            <td>Xerox VersaLink B605</td>
+            <td>172.16.79.86</td>
+            <td>175.108</td>
+            <td>-</td>
+            <td>175.108</td>
+            <td>🟢</td>
+            <td>20-09-2026 19:00:03</td>
+            </tr>
+            
+            <tr>
+            <td>62</td>
+            <td>CentroDeportivoDAE</td>
+            <td><a href="UAH-3384970779.html">3384970779</a></td>
+            <td>Xerox Phaser 3330</td>
+            <td>172.16.79.90</td>
+            <td>19.978</td>
+            <td>-</td>
+            <td>19.978</td>
+            <td>🟢</td>
+            <td>20-09-2026 19:00:04</td>
+            </tr>
+            
+            <tr>
+            <td>63</td>
+            <td>Cienfuego 33</td>
+            <td><a href="UAH-3351674686.html">3351674686</a></td>
+            <td>Xerox WorkCentre 3655S v1</td>
+            <td>172.16.79.96</td>
+            <td>55.774</td>
+            <td>-</td>
+            <td>55.774</td>
+            <td>🟢</td>
+            <td>20-09-2026 19:00:06</td>
+            </tr>
+            
+            <tr>
+            <td>64</td>
+            <td>biblioteca P3</td>
+            <td><a href="UAH-3353169172.html">3353169172</a></td>
+            <td>Xerox WorkCentre 3655X v1</td>
+            <td>172.16.79.97</td>
+            <td>117.887</td>
+            <td>-</td>
+            <td>117.887</td>
+            <td>🟢</td>
+            <td>20-09-2026 19:00:08</td>
+            </tr>
+            
+            <tr>
+            <td>65</td>
+            <td>XRX9C934E754E90</td>
+            <td><a href="UAH-3384970809.html">3384970809</a></td>
+            <td>Xerox Phaser 3330</td>
+            <td>172.16.79.99</td>
+            <td>26.324</td>
+            <td>-</td>
+            <td>26.324</td>
+            <td>🟢</td>
+            <td>20-09-2026 19:00:10</td>
+            </tr>
+            
+            <tr>
+            <td>66</td>
+            <td>Modulo5</td>
+            <td><a href="UAH-3940617030.html">3940617030</a></td>
+            <td>Xerox VersaLink B605</td>
+            <td>172.16.79.199</td>
+            <td>941.175</td>
+            <td>-</td>
+            <td>941.175</td>
+            <td>🟢</td>
+            <td>20-09-2026 18:58:21</td>
+            </tr>
+            
+            <tr>
+            <td>67</td>
+            <td>Modulo6</td>
+            <td><a href="UAH-3394178631.html">3394178631</a></td>
+            <td>Xerox VersaLink B600</td>
+            <td>172.16.79.200</td>
+            <td>1.109.856</td>
+            <td>-</td>
+            <td>1.109.856</td>
+            <td>🟢</td>
+            <td>20-09-2026 18:58:24</td>
+            </tr>
+            
+
+</tbody>
+
+</table>
+
+</div>
+
+<script>
+
+const buscar =
+    document.getElementById("buscar");
+
+buscar.addEventListener(
+    "keyup",
+    function() {
+
+        const filtro =
+            this.value.toLowerCase();
+
+        document
+            .querySelectorAll(
+                "#tabla tbody tr"
+            )
+            .forEach(fila => {
+
+                fila.style.display =
+                    fila.textContent
+                    .toLowerCase()
+                    .includes(filtro)
+                    ? ""
+                    : "none";
+
+            });
+
+    }
+);
+
+let columnaActual = -1;
+let ascendente = true;
+
+function ordenarTabla(columna)
+{
+    const tbody =
+        document.querySelector(
+            "#tabla tbody"
+        );
+
+    const filas =
+        Array.from(
+            tbody.querySelectorAll("tr")
+        );
+
+    if (columnaActual === columna)
+    {
+        ascendente = !ascendente;
+    }
+    else
+    {
+        columnaActual = columna;
+        ascendente = true;
+    }
+
+    filas.sort((a, b) => {
+
+        let aVal =
+            a.cells[columna]
+            .innerText
+            .trim();
+
+        let bVal =
+            b.cells[columna]
+            .innerText
+            .trim();
+
+        const aNum =
+            parseFloat(
+                aVal.replace(/\./g, "")
+            );
+
+        const bNum =
+            parseFloat(
+                bVal.replace(/\./g, "")
+            );
+
+        if (
+            !isNaN(aNum)
+            &&
+            !isNaN(bNum)
+        )
+        {
+            return ascendente
+                ? aNum - bNum
+                : bNum - aNum;
+        }
+
+        return ascendente
+            ? aVal.localeCompare(
+                bVal,
+                undefined,
+                {numeric:true}
+            )
+            : bVal.localeCompare(
+                aVal,
+                undefined,
+                {numeric:true}
+            );
+
+    });
+
+    tbody.innerHTML = "";
+
+    filas.forEach(
+        fila =>
+        tbody.appendChild(fila)
+    );
+
+    actualizarNumeracion();
+}
+
+function actualizarNumeracion()
+{
+    document
+        .querySelectorAll("#tabla tbody tr")
+        .forEach((fila, indice) => {
+
+            fila.cells[0].innerText =
+                indice + 1;
+
+        });
+}
+
+</script>
+
+
+</body>
+
+</html>
