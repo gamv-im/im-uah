@@ -1,0 +1,505 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="utf-8">
+
+<title>IM-V2 - UAH</title>
+
+<style>
+
+body {
+    font-family: Segoe UI, Arial, sans-serif;
+    background: #f8fafc;
+    margin: 0;
+}
+
+header {
+
+    background:
+        linear-gradient(
+            135deg,
+            #2563eb,
+            #1d4ed8
+        );
+
+    color: white;
+
+    padding: 25px 35px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo h1 {
+    margin:0;
+    font-size:42px;
+}
+
+.badge-cliente {
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            .2
+        );
+
+    padding:8px 18px;
+
+    border-radius:20px;
+
+    font-size:24px;
+
+    font-weight:bold;
+
+    margin-left:10px;
+}
+
+.logo p {
+    margin:6px 0 0 0;
+    opacity:.9;
+}
+
+.container {
+
+    max-width:1400px;
+
+    margin:auto;
+
+    padding:30px;
+}
+
+.grid {
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    gap:25px;
+}
+
+.card {
+
+    background:white;
+
+    border-radius:18px;
+
+    text-align:center;
+
+    padding:35px;
+
+    text-decoration:none;
+
+    box-shadow:
+        0 10px 25px
+        rgba(0,0,0,.08);
+
+    transition:.2s;
+}
+
+.card:hover {
+
+    transform:
+        translateY(-4px);
+}
+
+.card a {
+    color:inherit;
+    text-decoration:none;
+}
+
+.card-icon {
+    font-size:54px;
+    margin-bottom:15px;
+}
+
+.kpis {
+
+    margin-top:30px;
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(5,1fr);
+
+    gap:20px;
+}
+
+.kpi {
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:18px;
+
+    text-align:center;
+
+    box-shadow:
+        0 10px 25px
+        rgba(0,0,0,.08);
+}
+
+.kpi-numero {
+
+    font-size:50px;
+
+    font-weight:bold;
+}
+
+.kpi-label {
+
+    color:#666;
+
+    margin-top:10px;
+}
+
+.azul {
+    color:#2563eb;
+}
+
+.verde {
+    color:#16a34a;
+}
+
+.rojo {
+    color:#dc2626;
+}
+
+.naranja {
+    color:#f59e0b;
+}
+
+.morado {
+    color:#7c3aed;
+}
+
+.paneles {
+
+    margin-top:30px;
+
+    display:grid;
+
+    grid-template-columns:
+        1fr 2fr;
+
+    gap:25px;
+}
+
+.panel {
+
+    background:white;
+
+    border-radius:18px;
+
+    padding:25px;
+
+    box-shadow:
+        0 10px 25px
+        rgba(0,0,0,.08);
+}
+
+.panel h3 {
+
+    margin-top:0;
+
+    color:#2563eb;
+}
+
+.fecha-dia {
+
+    font-size:52px;
+
+    font-weight:bold;
+
+    color:#2563eb;
+
+    text-align:center;
+}
+
+.fecha-hora {
+
+    font-size:42px;
+
+    font-weight:bold;
+
+    text-align:center;
+}
+
+.actividad {
+
+    display:grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap:25px;
+}
+
+.actividad ul {
+    padding-left:20px;
+}
+
+.actividad li {
+    margin-bottom:10px;
+}
+
+.footer {
+
+    margin-top:30px;
+
+    text-align:center;
+
+    color:#666;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+
+<h1>
+
+IM-V2
+
+<span class="badge-cliente">
+UAH
+</span>
+
+</h1>
+
+<p>
+Sistema de Gestión de Impresoras
+</p>
+
+</div>
+
+<div>
+Gestión de Impresoras
+</div>
+
+</header>
+
+<div class="container">
+
+<div class="grid">
+
+<div class="card">
+<a href="inventario.html">
+
+<div class="card-icon">
+🖨️
+</div>
+
+<h2 class="azul">
+Inventario
+</h2>
+
+<p>
+Ver todos los equipos administrados.
+</p>
+
+</a>
+</div>
+
+<div class="card">
+<a href="alertas.html">
+
+<div class="card-icon">
+⚠️
+</div>
+
+<h2 class="naranja">
+Alertas
+</h2>
+
+<p>
+Revisar alertas y eventos registrados.
+</p>
+
+</a>
+</div>
+
+<div class="card">
+<a href="instalaciones.html">
+
+<div class="card-icon">
+🔧
+</div>
+
+<h2 class="verde">
+Instalaciones
+</h2>
+
+<p>
+Historial de cambios e instalaciones.
+</p>
+
+</a>
+</div>
+
+<div class="card">
+<a href="reportes.html">
+
+<div class="card-icon">
+📊
+</div>
+
+<h2 class="morado">
+Reportes
+</h2>
+
+<p>
+Estadísticas y análisis del parque.
+</p>
+
+</a>
+</div>
+
+</div>
+
+<div class="kpis">
+
+<div class="kpi">
+
+<div class="kpi-numero azul">
+67
+</div>
+
+<div class="kpi-label">
+Equipos Registrados
+</div>
+
+</div>
+
+<div class="kpi">
+
+<div class="kpi-numero verde">
+64
+</div>
+
+<div class="kpi-label">
+Equipos Online
+</div>
+
+</div>
+
+<div class="kpi">
+
+<div class="kpi-numero rojo">
+3
+</div>
+
+<div class="kpi-label">
+Equipos Offline
+</div>
+
+</div>
+
+<div class="kpi">
+
+<div class="kpi-numero naranja">
+29
+</div>
+
+<div class="kpi-label">
+Alertas Registradas
+</div>
+
+</div>
+
+<div class="kpi">
+
+<div class="kpi-numero morado">
+3
+</div>
+
+<div class="kpi-label">
+Instalaciones Registradas
+</div>
+
+</div>
+
+</div>
+
+<div class="paneles">
+
+<div class="panel">
+
+<h3>
+Última Actualización
+</h3>
+
+<div class="fecha-dia">
+20-09-2026
+</div>
+
+<div class="fecha-hora">
+19:00:44
+</div>
+
+</div>
+
+<div class="panel">
+
+<h3>
+Actividad Reciente
+</h3>
+
+<div class="actividad">
+
+<div>
+
+<strong>
+Últimas Alertas
+</strong>
+
+<ul>
+
+<li>UAH_0029 - Drum Black</li><li>UAH_0028 - Toner Yellow</li><li>UAH_0027 - Toner Yellow</li>
+
+</ul>
+
+</div>
+
+<div>
+
+<strong>
+Últimas Instalaciones
+</strong>
+
+<ul>
+
+<li>INS_0003 - Toner Black</li><li>INS_0002 - Toner Yellow</li><li>INS_0001 - Toner Yellow</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="footer">
+
+Generado por GAMV
+
+</div>
+
+</div>
+
+</body>
+
+</html>
