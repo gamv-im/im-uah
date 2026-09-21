@@ -1,0 +1,1136 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="utf-8">
+
+<title>UAH Demo - Direccion de Admision Patio</title>
+
+<style>
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fa;
+    margin: 0;
+}
+
+header {
+    background: #2563eb;
+    color: white;
+    padding: 15px 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+
+.barra {
+    width: 250px;
+    height: 18px;
+    background: #e5e7eb;
+    border-radius: 10px;
+    overflow: hidden;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.relleno {
+    height: 100%;
+    background: #38bdf8;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+th {
+    background: #f3f4f6;
+    text-align: left;
+}
+
+.navegacion {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+.btn-nav {
+    display: inline-block;
+    padding: 10px 15px;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.btn-nav:hover {
+    background: #1d4ed8;
+}
+
+.btn-nav:visited {
+    color: white;
+}
+
+.nav-header {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.nav-header a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    border: 1px solid rgba(255,255,255,.4);
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.nav-header a:hover {
+    background: rgba(255,255,255,.15);
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>UAH Demo - Direccion de Admision Patio</h1>
+
+<div class="nav-header">
+
+<a href="index.html">🏠 Inicio</a>
+
+<a href="inventario.html">🖨️ Inventario</a>
+
+<a href="alertas.html">⚠️ Alertas</a>
+
+<a href="instalaciones.html">🔧 Instalaciones</a>
+
+</div>
+
+</header>
+
+
+<div class="container">
+
+<div class="card">
+
+<h2>Información General</h2>
+
+<table>
+
+<tr>
+<th>Serie</th>
+<td>3399952017</td>
+</tr>
+
+<tr>
+<th>Modelo</th>
+<td>Xerox VersaLink B7030</td>
+</tr>
+
+<tr>
+<th>IP</th>
+<td>172.16.79.53</td>
+</tr>
+    
+<tr>
+<th>Estado</th>
+<td>🔴 Offline</td>
+</tr>
+
+<tr>
+<th>Última lectura</th>
+<td>17-09-2026 23:02:11</td>
+</tr>
+
+</table>
+
+</div>
+
+<div class="card">
+
+<h2>Contadores</h2>
+
+<table>
+
+<tr>
+<th>Negro</th>
+<td>96.082</td>
+</tr>
+
+<tr>
+<th>Color</th>
+<td>-</td>
+</tr>
+
+<tr>
+<th>Total</th>
+<td>96.082</td>
+</tr>
+
+</table>
+
+</div>
+
+<div class="card">
+
+<h2>Consumibles Actuales</h2>
+
+<table>
+
+<tr>
+<th>Consumible</th>
+<th>PN</th>
+<th>Nivel</th>
+</tr>
+
+
+<tr>
+<th colspan="3"
+    style="
+        background:#2563eb;
+        color:white;
+        text-align:left;
+    ">
+    TONERS
+</th>
+</tr>
+
+            <tr>
+
+                <td>Toner Black</td>
+
+                <td>106R03392</td>
+
+                <td>
+
+                <div class="barra">
+
+                <div
+                    class="relleno"
+                    style="width:14%"
+                ></div>
+
+                </div>
+
+                <span>14%</span>
+
+                </td>
+
+                </tr>
+            
+        <tr>
+            <th colspan="3"
+            style="
+                background:#374151;
+                color:white;
+                text-align:left;
+            ">
+            OTROS CONSUMIBLES
+        </th>
+        </tr>
+        
+            <tr>
+
+                <td>Drum Black</td>
+
+                <td>113R00779</td>
+
+                <td>
+
+                <div class="barra">
+
+                <div
+                    class="relleno"
+                    style="width:96%"
+                ></div>
+
+                </div>
+
+                <span>96%</span>
+
+                </td>
+
+                </tr>
+            
+
+</table>
+
+</div>
+
+<div class="card">
+
+<h2>Historial de Alertas</h2>
+
+<table>
+
+<tr>
+<th>Código</th>
+<th>Tipo</th>
+<th>Consumible</th>
+<th>PN</th>
+<th>Nivel</th>
+<th>Fecha</th>
+<th>Estado</th>
+</tr>
+
+
+<tr>
+
+<td>UAH_0025</td>
+
+<td>TONER_BAJO</td>
+
+<td>Toner Black</td>
+
+<td>106R03392</td>
+
+<td>14%</td>
+
+<td>14-09-2026 14:46:45</td>
+
+<td>ADVERTENCIA</td>
+
+</tr>
+
+
+</table>
+
+</div>
+
+<div class="card">
+
+<h2>Historial de Instalaciones</h2>
+
+<table>
+
+<tr>
+<th>Código</th>
+<th>Consumible</th>
+<th>PN</th>
+<th>Antes</th>
+<th>Después</th>
+<th>Incremento</th>
+<th>Fecha</th>
+</tr>
+
+
+<tr>
+<td colspan="7" style="text-align:center;color:#666;">
+No existen instalaciones registradas.
+</td>
+</tr>
+
+
+</table>
+
+</div>
+
+
+<div class="card">
+
+<h2>
+📈 Evolución Toner Black
+</h2>
+
+<svg
+    width="100%"
+    height="300"
+    viewBox="0 0 1000 300"
+>
+
+
+<line
+    x1="70"
+    y1="30.0"
+    x2="970"
+    y2="30.0"
+    stroke="#e5e7eb"
+/>
+
+<text
+    x="60"
+    y="34.0"
+    text-anchor="end"
+    font-size="11"
+    fill="#666"
+>
+100%
+</text>
+
+<line
+    x1="70"
+    y1="85.0"
+    x2="970"
+    y2="85.0"
+    stroke="#e5e7eb"
+/>
+
+<text
+    x="60"
+    y="89.0"
+    text-anchor="end"
+    font-size="11"
+    fill="#666"
+>
+75%
+</text>
+
+<line
+    x1="70"
+    y1="140.0"
+    x2="970"
+    y2="140.0"
+    stroke="#e5e7eb"
+/>
+
+<text
+    x="60"
+    y="144.0"
+    text-anchor="end"
+    font-size="11"
+    fill="#666"
+>
+50%
+</text>
+
+<line
+    x1="70"
+    y1="195.0"
+    x2="970"
+    y2="195.0"
+    stroke="#e5e7eb"
+/>
+
+<text
+    x="60"
+    y="199.0"
+    text-anchor="end"
+    font-size="11"
+    fill="#666"
+>
+25%
+</text>
+
+<line
+    x1="70"
+    y1="250.0"
+    x2="970"
+    y2="250.0"
+    stroke="#e5e7eb"
+/>
+
+<text
+    x="60"
+    y="254.0"
+    text-anchor="end"
+    font-size="11"
+    fill="#666"
+>
+0%
+</text>
+
+
+<line
+    x1="70"
+    y1="30"
+    x2="70"
+    y2="250"
+    stroke="#999"
+/>
+
+<line
+    x1="70"
+    y1="250"
+    x2="970"
+    y2="250"
+    stroke="#999"
+/>
+
+<polyline
+    points="70.0,219.2 182.5,219.2 295.0,219.2 407.5,219.2 520.0,219.2 632.5,219.2 745.0,219.2 857.5,219.2 970.0,219.2"
+    fill="none"
+    stroke="#2563eb"
+    stroke-width="3"
+/>
+
+
+<circle
+    cx="70.0"
+    cy="219.2"
+    r="4"
+    fill="#2563eb"
+/>
+
+<text
+    x="70.0"
+    y="209.2"
+    text-anchor="middle"
+    font-size="12"
+    fill="#111"
+>
+14%
+</text>
+
+<text
+    x="70.0"
+    y="285"
+    text-anchor="middle"
+    font-size="11"
+    fill="#666"
+>
+14/09
+</text>
+
+<circle
+    cx="182.5"
+    cy="219.2"
+    r="4"
+    fill="#2563eb"
+/>
+
+<text
+    x="182.5"
+    y="209.2"
+    text-anchor="middle"
+    font-size="12"
+    fill="#111"
+>
+14%
+</text>
+
+<text
+    x="182.5"
+    y="285"
+    text-anchor="middle"
+    font-size="11"
+    fill="#666"
+>
+15/09
+</text>
+
+<circle
+    cx="295.0"
+    cy="219.2"
+    r="4"
+    fill="#2563eb"
+/>
+
+<text
+    x="295.0"
+    y="209.2"
+    text-anchor="middle"
+    font-size="12"
+    fill="#111"
+>
+14%
+</text>
+
+<text
+    x="295.0"
+    y="285"
+    text-anchor="middle"
+    font-size="11"
+    fill="#666"
+>
+15/09
+</text>
+
+<circle
+    cx="407.5"
+    cy="219.2"
+    r="4"
+    fill="#2563eb"
+/>
+
+<text
+    x="407.5"
+    y="209.2"
+    text-anchor="middle"
+    font-size="12"
+    fill="#111"
+>
+14%
+</text>
+
+<text
+    x="407.5"
+    y="285"
+    text-anchor="middle"
+    font-size="11"
+    fill="#666"
+>
+15/09
+</text>
+
+<circle
+    cx="520.0"
+    cy="219.2"
+    r="4"
+    fill="#2563eb"
+/>
+
+<text
+    x="520.0"
+    y="209.2"
+    text-anchor="middle"
+    font-size="12"
+    fill="#111"
+>
+14%
+</text>
+
+<text
+    x="520.0"
+    y="285"
+    text-anchor="middle"
+    font-size="11"
+    fill="#666"
+>
+16/09
+</text>
+
+<circle
+    cx="632.5"
+    cy="219.2"
+    r="4"
+    fill="#2563eb"
+/>
+
+<text
+    x="632.5"
+    y="209.2"
+    text-anchor="middle"
+    font-size="12"
+    fill="#111"
+>
+14%
+</text>
+
+<text
+    x="632.5"
+    y="285"
+    text-anchor="middle"
+    font-size="11"
+    fill="#666"
+>
+16/09
+</text>
+
+<circle
+    cx="745.0"
+    cy="219.2"
+    r="4"
+    fill="#2563eb"
+/>
+
+<text
+    x="745.0"
+    y="209.2"
+    text-anchor="middle"
+    font-size="12"
+    fill="#111"
+>
+14%
+</text>
+
+<text
+    x="745.0"
+    y="285"
+    text-anchor="middle"
+    font-size="11"
+    fill="#666"
+>
+17/09
+</text>
+
+<circle
+    cx="857.5"
+    cy="219.2"
+    r="4"
+    fill="#2563eb"
+/>
+
+<text
+    x="857.5"
+    y="209.2"
+    text-anchor="middle"
+    font-size="12"
+    fill="#111"
+>
+14%
+</text>
+
+<text
+    x="857.5"
+    y="285"
+    text-anchor="middle"
+    font-size="11"
+    fill="#666"
+>
+17/09
+</text>
+
+<circle
+    cx="970.0"
+    cy="219.2"
+    r="4"
+    fill="#2563eb"
+/>
+
+<text
+    x="970.0"
+    y="209.2"
+    text-anchor="middle"
+    font-size="12"
+    fill="#111"
+>
+14%
+</text>
+
+<text
+    x="970.0"
+    y="285"
+    text-anchor="middle"
+    font-size="11"
+    fill="#666"
+>
+17/09
+</text>
+
+
+
+<text
+    x="70.0"
+    y="189.2"
+    text-anchor="middle"
+    font-size="18"
+    fill="#dc2626"
+>
+▼
+</text>
+
+
+</svg>
+
+</div>
+
+<div class="card">
+
+<h2>
+📈 Evolución Drum Black
+</h2>
+
+<svg
+    width="100%"
+    height="300"
+    viewBox="0 0 1000 300"
+>
+
+
+<line
+    x1="70"
+    y1="30.0"
+    x2="970"
+    y2="30.0"
+    stroke="#e5e7eb"
+/>
+
+<text
+    x="60"
+    y="34.0"
+    text-anchor="end"
+    font-size="11"
+    fill="#666"
+>
+100%
+</text>
+
+<line
+    x1="70"
+    y1="85.0"
+    x2="970"
+    y2="85.0"
+    stroke="#e5e7eb"
+/>
+
+<text
+    x="60"
+    y="89.0"
+    text-anchor="end"
+    font-size="11"
+    fill="#666"
+>
+75%
+</text>
+
+<line
+    x1="70"
+    y1="140.0"
+    x2="970"
+    y2="140.0"
+    stroke="#e5e7eb"
+/>
+
+<text
+    x="60"
+    y="144.0"
+    text-anchor="end"
+    font-size="11"
+    fill="#666"
+>
+50%
+</text>
+
+<line
+    x1="70"
+    y1="195.0"
+    x2="970"
+    y2="195.0"
+    stroke="#e5e7eb"
+/>
+
+<text
+    x="60"
+    y="199.0"
+    text-anchor="end"
+    font-size="11"
+    fill="#666"
+>
+25%
+</text>
+
+<line
+    x1="70"
+    y1="250.0"
+    x2="970"
+    y2="250.0"
+    stroke="#e5e7eb"
+/>
+
+<text
+    x="60"
+    y="254.0"
+    text-anchor="end"
+    font-size="11"
+    fill="#666"
+>
+0%
+</text>
+
+
+<line
+    x1="70"
+    y1="30"
+    x2="70"
+    y2="250"
+    stroke="#999"
+/>
+
+<line
+    x1="70"
+    y1="250"
+    x2="970"
+    y2="250"
+    stroke="#999"
+/>
+
+<polyline
+    points="70.0,38.8 182.5,38.8 295.0,38.8 407.5,38.8 520.0,38.8 632.5,38.8 745.0,38.8 857.5,38.8 970.0,38.8"
+    fill="none"
+    stroke="#2563eb"
+    stroke-width="3"
+/>
+
+
+<circle
+    cx="70.0"
+    cy="38.8"
+    r="4"
+    fill="#2563eb"
+/>
+
+<text
+    x="70.0"
+    y="28.799999999999997"
+    text-anchor="middle"
+    font-size="12"
+    fill="#111"
+>
+96%
+</text>
+
+<text
+    x="70.0"
+    y="285"
+    text-anchor="middle"
+    font-size="11"
+    fill="#666"
+>
+14/09
+</text>
+
+<circle
+    cx="182.5"
+    cy="38.8"
+    r="4"
+    fill="#2563eb"
+/>
+
+<text
+    x="182.5"
+    y="28.799999999999997"
+    text-anchor="middle"
+    font-size="12"
+    fill="#111"
+>
+96%
+</text>
+
+<text
+    x="182.5"
+    y="285"
+    text-anchor="middle"
+    font-size="11"
+    fill="#666"
+>
+15/09
+</text>
+
+<circle
+    cx="295.0"
+    cy="38.8"
+    r="4"
+    fill="#2563eb"
+/>
+
+<text
+    x="295.0"
+    y="28.799999999999997"
+    text-anchor="middle"
+    font-size="12"
+    fill="#111"
+>
+96%
+</text>
+
+<text
+    x="295.0"
+    y="285"
+    text-anchor="middle"
+    font-size="11"
+    fill="#666"
+>
+15/09
+</text>
+
+<circle
+    cx="407.5"
+    cy="38.8"
+    r="4"
+    fill="#2563eb"
+/>
+
+<text
+    x="407.5"
+    y="28.799999999999997"
+    text-anchor="middle"
+    font-size="12"
+    fill="#111"
+>
+96%
+</text>
+
+<text
+    x="407.5"
+    y="285"
+    text-anchor="middle"
+    font-size="11"
+    fill="#666"
+>
+15/09
+</text>
+
+<circle
+    cx="520.0"
+    cy="38.8"
+    r="4"
+    fill="#2563eb"
+/>
+
+<text
+    x="520.0"
+    y="28.799999999999997"
+    text-anchor="middle"
+    font-size="12"
+    fill="#111"
+>
+96%
+</text>
+
+<text
+    x="520.0"
+    y="285"
+    text-anchor="middle"
+    font-size="11"
+    fill="#666"
+>
+16/09
+</text>
+
+<circle
+    cx="632.5"
+    cy="38.8"
+    r="4"
+    fill="#2563eb"
+/>
+
+<text
+    x="632.5"
+    y="28.799999999999997"
+    text-anchor="middle"
+    font-size="12"
+    fill="#111"
+>
+96%
+</text>
+
+<text
+    x="632.5"
+    y="285"
+    text-anchor="middle"
+    font-size="11"
+    fill="#666"
+>
+16/09
+</text>
+
+<circle
+    cx="745.0"
+    cy="38.8"
+    r="4"
+    fill="#2563eb"
+/>
+
+<text
+    x="745.0"
+    y="28.799999999999997"
+    text-anchor="middle"
+    font-size="12"
+    fill="#111"
+>
+96%
+</text>
+
+<text
+    x="745.0"
+    y="285"
+    text-anchor="middle"
+    font-size="11"
+    fill="#666"
+>
+17/09
+</text>
+
+<circle
+    cx="857.5"
+    cy="38.8"
+    r="4"
+    fill="#2563eb"
+/>
+
+<text
+    x="857.5"
+    y="28.799999999999997"
+    text-anchor="middle"
+    font-size="12"
+    fill="#111"
+>
+96%
+</text>
+
+<text
+    x="857.5"
+    y="285"
+    text-anchor="middle"
+    font-size="11"
+    fill="#666"
+>
+17/09
+</text>
+
+<circle
+    cx="970.0"
+    cy="38.8"
+    r="4"
+    fill="#2563eb"
+/>
+
+<text
+    x="970.0"
+    y="28.799999999999997"
+    text-anchor="middle"
+    font-size="12"
+    fill="#111"
+>
+96%
+</text>
+
+<text
+    x="970.0"
+    y="285"
+    text-anchor="middle"
+    font-size="11"
+    fill="#666"
+>
+17/09
+</text>
+
+
+
+
+</svg>
+
+</div>
+
+
+
+</div>
+
+</body>
+
+</html>

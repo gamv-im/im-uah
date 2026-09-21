@@ -1,0 +1,947 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="utf-8">
+
+<title>Alertas y Eventos - PDR</title>
+
+<style>
+
+body {
+    font-family: Arial, sans-serif;
+    background:#f5f7fa;
+    margin:0;
+}
+
+header {
+    background: #2563eb;
+    color: white;
+    padding: 15px 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.container {
+    max-width:1400px;
+    margin:auto;
+    padding:20px;
+}
+
+table {
+    width:100%;
+    border-collapse:collapse;
+    background:white;
+}
+
+th,
+td {
+    border:1px solid #ddd;
+    padding:8px;
+}
+
+th {
+    background:#f3f4f6;
+    cursor:pointer;
+}
+
+tr:hover {
+    background:#f9fafb;
+}
+
+.buscar {
+    width:100%;
+    max-width:400px;
+    margin-bottom:20px;
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:6px;
+}
+
+.navegacion {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+.btn-nav {
+    display: inline-block;
+    padding: 10px 15px;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.btn-nav:hover {
+    background: #1d4ed8;
+}
+
+.btn-nav:visited {
+    color: white;
+}
+
+.nav-header {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.nav-header a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    border: 1px solid rgba(255,255,255,.4);
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.nav-header a:hover {
+    background: rgba(255,255,255,.15);
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>Alertas y Eventos - PDR</h1>
+
+<div class="nav-header">
+
+<a href="index.html">🏠 Inicio</a>
+
+<a href="inventario.html">🖨️ Inventario</a>
+
+<a href="instalaciones.html">🔧 Instalaciones</a>
+
+</div>
+
+</header>
+
+<div class="container">
+
+<input
+class="buscar"
+type="text"
+id="buscar"
+placeholder="🔍 Buscar..."
+>
+
+<table id="tabla">
+
+<thead>
+
+<tr>
+<th onclick="ordenarTabla(0)">ID ↕</th>
+<th onclick="ordenarTabla(1)">Estado ↕</th>
+<th onclick="ordenarTabla(2)">Equipo ↕</th>
+<th onclick="ordenarTabla(3)">Serie ↕</th>
+<th onclick="ordenarTabla(4)">Modelo ↕</th>
+<th onclick="ordenarTabla(5)">Consumible ↕</th>
+<th onclick="ordenarTabla(6)">PN ↕</th>
+<th onclick="ordenarTabla(7)">Valor ↕</th>
+<th onclick="ordenarTabla(8)">Fecha Creación ↕</th>
+<th onclick="ordenarTabla(9)">Fecha Resolución ↕</th>
+</tr>
+
+</thead>
+
+<tbody>
+
+
+<tr>
+<td>UAH_0001</td>
+<td>
+<span style="
+    color:white;
+    background:#f59e0b;
+    padding:4px 8px;
+    border-radius:5px;
+">
+ADVERTENCIA
+</span>
+</td>
+<td>Campus B 1er piso</td>
+<td><a href="PDR-3399951754.html">3399951754</a></td>
+<td>Xerox VersaLink B7030</td>
+<td>Toner Black</td>
+<td>106R03392</td>
+<td>16%</td>
+<td>11-09-2026 15:53:02</td>
+<td>-</td>
+</tr>
+
+<tr>
+<td>UAH_0002</td>
+<td>
+<span style="
+    color:white;
+    background:#dc2626;
+    padding:4px 8px;
+    border-radius:5px;
+">
+ALERTA
+</span>
+</td>
+<td>Campus_B_piso6</td>
+<td><a href="PDR-3384969746.html">3384969746</a></td>
+<td>Xerox Phaser 3330</td>
+<td>Toner Black</td>
+<td>106R03625</td>
+<td>7%</td>
+<td>12-09-2026 10:06:12</td>
+<td>-</td>
+</tr>
+
+<tr>
+<td>UAH_0003</td>
+<td>
+<span style="
+    color:white;
+    background:#dc2626;
+    padding:4px 8px;
+    border-radius:5px;
+">
+ALERTA
+</span>
+</td>
+<td>02.- Rectoria</td>
+<td><a href="PDR-3394991545.html">3394991545</a></td>
+<td>Xerox VersaLink B605</td>
+<td>Toner Black</td>
+<td>106R03946</td>
+<td>9%</td>
+<td>12-09-2026 12:56:09</td>
+<td>-</td>
+</tr>
+
+<tr>
+<td>UAH_0004</td>
+<td>
+<span style="
+    color:white;
+    background:#f59e0b;
+    padding:4px 8px;
+    border-radius:5px;
+">
+ADVERTENCIA
+</span>
+</td>
+<td>Direccion de Biblioteca</td>
+<td><a href="PDR-3940618222.html">3940618222</a></td>
+<td>Xerox VersaLink B605</td>
+<td>Drum Black</td>
+<td>101R00582</td>
+<td>8%</td>
+<td>12-09-2026 12:56:09</td>
+<td>-</td>
+</tr>
+
+<tr>
+<td>UAH_0005</td>
+<td>
+<span style="
+    color:white;
+    background:#f59e0b;
+    padding:4px 8px;
+    border-radius:5px;
+">
+ADVERTENCIA
+</span>
+</td>
+<td>11.- Pastoral</td>
+<td><a href="PDR-3940616505.html">3940616505</a></td>
+<td>Xerox VersaLink B605</td>
+<td>Toner Black</td>
+<td>106R03946</td>
+<td>12%</td>
+<td>12-09-2026 12:56:09</td>
+<td>-</td>
+</tr>
+
+<tr>
+<td>UAH_0006</td>
+<td>
+<span style="
+    color:white;
+    background:#dc2626;
+    padding:4px 8px;
+    border-radius:5px;
+">
+ALERTA
+</span>
+</td>
+<td>Facultad de Trabajo Social</td>
+<td><a href="PDR-3940616548.html">3940616548</a></td>
+<td>Xerox VersaLink B605</td>
+<td>Toner Black</td>
+<td>106R03946</td>
+<td>2%</td>
+<td>12-09-2026 12:56:09</td>
+<td>-</td>
+</tr>
+
+<tr>
+<td>UAH_0007</td>
+<td>
+<span style="
+    color:white;
+    background:#dc2626;
+    padding:4px 8px;
+    border-radius:5px;
+">
+ALERTA
+</span>
+</td>
+<td>FilHum</td>
+<td><a href="PDR-3940618842.html">3940618842</a></td>
+<td>Xerox VersaLink B605</td>
+<td>Drum Black</td>
+<td>101R00582</td>
+<td>3%</td>
+<td>12-09-2026 12:56:09</td>
+<td>-</td>
+</tr>
+
+<tr>
+<td>UAH_0008</td>
+<td>
+<span style="
+    color:white;
+    background:#16a34a;
+    padding:4px 8px;
+    border-radius:5px;
+">
+RESUELTA
+</span>
+</td>
+<td>Central de Apuntes</td>
+<td><a href="PDR-3391871700.html">3391871700</a></td>
+<td>Xerox VersaLink C7025</td>
+<td>Toner Black</td>
+<td>106R03733</td>
+<td>1%</td>
+<td>12-09-2026 12:56:09</td>
+<td>15-09-2026 21:55:34</td>
+</tr>
+
+<tr>
+<td>UAH_0009</td>
+<td>
+<span style="
+    color:white;
+    background:#16a34a;
+    padding:4px 8px;
+    border-radius:5px;
+">
+RESUELTA
+</span>
+</td>
+<td>Central de Apuntes</td>
+<td><a href="PDR-3391871700.html">3391871700</a></td>
+<td>Xerox VersaLink C7025</td>
+<td>Toner Yellow</td>
+<td>106R03734</td>
+<td>100%</td>
+<td>12-09-2026 12:56:09</td>
+<td>14-09-2026 14:46:45</td>
+</tr>
+
+<tr>
+<td>UAH_0010</td>
+<td>
+<span style="
+    color:white;
+    background:#16a34a;
+    padding:4px 8px;
+    border-radius:5px;
+">
+RESUELTA
+</span>
+</td>
+<td>Central de Apuntes</td>
+<td><a href="PDR-3391871700.html">3391871700</a></td>
+<td>Xerox VersaLink C7025</td>
+<td>Toner Cyan</td>
+<td>106R03736</td>
+<td>96%</td>
+<td>12-09-2026 12:56:09</td>
+<td>14-09-2026 13:59:39</td>
+</tr>
+
+<tr>
+<td>UAH_0011</td>
+<td>
+<span style="
+    color:white;
+    background:#f59e0b;
+    padding:4px 8px;
+    border-radius:5px;
+">
+ADVERTENCIA
+</span>
+</td>
+<td>Central de Apuntes</td>
+<td><a href="PDR-3391871700.html">3391871700</a></td>
+<td>Xerox VersaLink C7025</td>
+<td>Drum Black</td>
+<td>113R00780</td>
+<td>5%</td>
+<td>12-09-2026 12:56:09</td>
+<td>-</td>
+</tr>
+
+<tr>
+<td>UAH_0012</td>
+<td>
+<span style="
+    color:white;
+    background:#f59e0b;
+    padding:4px 8px;
+    border-radius:5px;
+">
+ADVERTENCIA
+</span>
+</td>
+<td>DERECHO</td>
+<td><a href="PDR-3399946262.html">3399946262</a></td>
+<td>Xerox VersaLink B7030</td>
+<td>Toner Black</td>
+<td>106R03392</td>
+<td>16%</td>
+<td>12-09-2026 12:56:09</td>
+<td>-</td>
+</tr>
+
+<tr>
+<td>UAH_0013</td>
+<td>
+<span style="
+    color:white;
+    background:#f59e0b;
+    padding:4px 8px;
+    border-radius:5px;
+">
+ADVERTENCIA
+</span>
+</td>
+<td>Vice de Investigacion y Postgrad</td>
+<td><a href="PDR-3940617021.html">3940617021</a></td>
+<td>Xerox VersaLink B605</td>
+<td>Toner Black</td>
+<td>106R03946</td>
+<td>11%</td>
+<td>12-09-2026 12:56:09</td>
+<td>-</td>
+</tr>
+
+<tr>
+<td>UAH_0014</td>
+<td>
+<span style="
+    color:white;
+    background:#f59e0b;
+    padding:4px 8px;
+    border-radius:5px;
+">
+ADVERTENCIA
+</span>
+</td>
+<td>Centro Uni. Ignaciano 2do piso</td>
+<td><a href="PDR-3399952335.html">3399952335</a></td>
+<td>Xerox VersaLink B7030</td>
+<td>Drum Black</td>
+<td>113R00779</td>
+<td>10%</td>
+<td>12-09-2026 12:56:09</td>
+<td>-</td>
+</tr>
+
+<tr>
+<td>UAH_0015</td>
+<td>
+<span style="
+    color:white;
+    background:#16a34a;
+    padding:4px 8px;
+    border-radius:5px;
+">
+RESUELTA
+</span>
+</td>
+<td>Antropologia</td>
+<td><a href="PDR-3940616513.html">3940616513</a></td>
+<td>Xerox VersaLink B605</td>
+<td>Toner Black</td>
+<td>106R03946</td>
+<td>0%</td>
+<td>12-09-2026 12:56:09</td>
+<td>21-09-2026 13:00:34</td>
+</tr>
+
+<tr>
+<td>UAH_0016</td>
+<td>
+<span style="
+    color:white;
+    background:#f59e0b;
+    padding:4px 8px;
+    border-radius:5px;
+">
+ADVERTENCIA
+</span>
+</td>
+<td>Antropologia</td>
+<td><a href="PDR-3940616513.html">3940616513</a></td>
+<td>Xerox VersaLink B605</td>
+<td>Drum Black</td>
+<td>101R00582</td>
+<td>9%</td>
+<td>12-09-2026 12:56:09</td>
+<td>-</td>
+</tr>
+
+<tr>
+<td>UAH_0017</td>
+<td>
+<span style="
+    color:white;
+    background:#16a34a;
+    padding:4px 8px;
+    border-radius:5px;
+">
+RESUELTA
+</span>
+</td>
+<td>Sec_Educa</td>
+<td><a href="PDR-3942937600.html">3942937600</a></td>
+<td>Xerox VersaLink B7030</td>
+<td>Toner Black</td>
+<td>106R03392</td>
+<td>1%</td>
+<td>12-09-2026 12:56:09</td>
+<td>21-09-2026 10:00:50</td>
+</tr>
+
+<tr>
+<td>UAH_0018</td>
+<td>
+<span style="
+    color:white;
+    background:#f59e0b;
+    padding:4px 8px;
+    border-radius:5px;
+">
+ADVERTENCIA
+</span>
+</td>
+<td>DOP</td>
+<td><a href="PDR-3399946181.html">3399946181</a></td>
+<td>Xerox VersaLink B7030</td>
+<td>Toner Black</td>
+<td>106R03392</td>
+<td>15%</td>
+<td>12-09-2026 13:08:36</td>
+<td>-</td>
+</tr>
+
+<tr>
+<td>UAH_0019</td>
+<td>
+<span style="
+    color:white;
+    background:#dc2626;
+    padding:4px 8px;
+    border-radius:5px;
+">
+ALERTA
+</span>
+</td>
+<td>Facultad de Geografia</td>
+<td><a href="PDR-3399946009.html">3399946009</a></td>
+<td>Xerox VersaLink B7030</td>
+<td>Toner Black</td>
+<td>106R03392</td>
+<td>4%</td>
+<td>12-09-2026 13:08:36</td>
+<td>-</td>
+</tr>
+
+<tr>
+<td>UAH_0020</td>
+<td>
+<span style="
+    color:white;
+    background:#dc2626;
+    padding:4px 8px;
+    border-radius:5px;
+">
+ALERTA
+</span>
+</td>
+<td>DIPER</td>
+<td><a href="PDR-3384970914.html">3384970914</a></td>
+<td>Xerox Phaser 3330</td>
+<td>Drum Black</td>
+<td>101R00555</td>
+<td>2%</td>
+<td>14-09-2026 11:33:25</td>
+<td>-</td>
+</tr>
+
+<tr>
+<td>UAH_0021</td>
+<td>
+<span style="
+    color:white;
+    background:#f59e0b;
+    padding:4px 8px;
+    border-radius:5px;
+">
+ADVERTENCIA
+</span>
+</td>
+<td>CentroDeportivoDAE</td>
+<td><a href="PDR-3384970779.html">3384970779</a></td>
+<td>Xerox Phaser 3330</td>
+<td>Toner Black</td>
+<td>106R03625</td>
+<td>14%</td>
+<td>14-09-2026 11:33:25</td>
+<td>-</td>
+</tr>
+
+<tr>
+<td>UAH_0022</td>
+<td>
+<span style="
+    color:white;
+    background:#f59e0b;
+    padding:4px 8px;
+    border-radius:5px;
+">
+ADVERTENCIA
+</span>
+</td>
+<td>XRX9C934E754E90</td>
+<td><a href="PDR-3384970809.html">3384970809</a></td>
+<td>Xerox Phaser 3330</td>
+<td>Drum Black</td>
+<td>101R00555</td>
+<td>13%</td>
+<td>14-09-2026 11:33:25</td>
+<td>-</td>
+</tr>
+
+<tr>
+<td>UAH_0023</td>
+<td>
+<span style="
+    color:white;
+    background:#16a34a;
+    padding:4px 8px;
+    border-radius:5px;
+">
+RESUELTA
+</span>
+</td>
+<td>Central de Apuntes</td>
+<td><a href="PDR-3391871700.html">3391871700</a></td>
+<td>Xerox VersaLink C7025</td>
+<td>Toner Magenta</td>
+<td>106R03735</td>
+<td>84%</td>
+<td>14-09-2026 12:10:13</td>
+<td>14-09-2026 13:59:39</td>
+</tr>
+
+<tr>
+<td>UAH_0024</td>
+<td>
+<span style="
+    color:white;
+    background:#dc2626;
+    padding:4px 8px;
+    border-radius:5px;
+">
+ALERTA
+</span>
+</td>
+<td>Facultad de Literatura</td>
+<td><a href="PDR-3399945436.html">3399945436</a></td>
+<td>Xerox VersaLink B7030</td>
+<td>Toner Black</td>
+<td>106R03392</td>
+<td>4%</td>
+<td>14-09-2026 13:59:39</td>
+<td>-</td>
+</tr>
+
+<tr>
+<td>UAH_0025</td>
+<td>
+<span style="
+    color:white;
+    background:#f59e0b;
+    padding:4px 8px;
+    border-radius:5px;
+">
+ADVERTENCIA
+</span>
+</td>
+<td>Direccion de Admision Patio</td>
+<td><a href="PDR-3399952017.html">3399952017</a></td>
+<td>Xerox VersaLink B7030</td>
+<td>Toner Black</td>
+<td>106R03392</td>
+<td>14%</td>
+<td>14-09-2026 14:46:45</td>
+<td>-</td>
+</tr>
+
+<tr>
+<td>UAH_0026</td>
+<td>
+<span style="
+    color:white;
+    background:#16a34a;
+    padding:4px 8px;
+    border-radius:5px;
+">
+RESUELTA
+</span>
+</td>
+<td>Central de Apuntes</td>
+<td><a href="PDR-3391871700.html">3391871700</a></td>
+<td>Xerox VersaLink C7025</td>
+<td>Toner Yellow</td>
+<td>106R03734</td>
+<td>100%</td>
+<td>14-09-2026 15:02:59</td>
+<td>14-09-2026 15:10:51</td>
+</tr>
+
+<tr>
+<td>UAH_0027</td>
+<td>
+<span style="
+    color:white;
+    background:#16a34a;
+    padding:4px 8px;
+    border-radius:5px;
+">
+RESUELTA
+</span>
+</td>
+<td>Central de Apuntes</td>
+<td><a href="PDR-3391871700.html">3391871700</a></td>
+<td>Xerox VersaLink C7025</td>
+<td>Toner Yellow</td>
+<td>106R03734</td>
+<td>1%</td>
+<td>14-09-2026 15:43:34</td>
+<td>14-09-2026 15:47:02</td>
+</tr>
+
+<tr>
+<td>UAH_0028</td>
+<td>
+<span style="
+    color:white;
+    background:#16a34a;
+    padding:4px 8px;
+    border-radius:5px;
+">
+RESUELTA
+</span>
+</td>
+<td>Central de Apuntes</td>
+<td><a href="PDR-3391871700.html">3391871700</a></td>
+<td>Xerox VersaLink C7025</td>
+<td>Toner Yellow</td>
+<td>106R03734</td>
+<td>1%</td>
+<td>14-09-2026 16:21:07</td>
+<td>14-09-2026 16:32:20</td>
+</tr>
+
+<tr>
+<td>UAH_0029</td>
+<td>
+<span style="
+    color:white;
+    background:#dc2626;
+    padding:4px 8px;
+    border-radius:5px;
+">
+ALERTA
+</span>
+</td>
+<td>Modulo6</td>
+<td><a href="PDR-3394178631.html">3394178631</a></td>
+<td>Xerox VersaLink B600</td>
+<td>Drum Black</td>
+<td>101R00582</td>
+<td>3%</td>
+<td>14-09-2026 18:18:58</td>
+<td>-</td>
+</tr>
+
+<tr>
+<td>UAH_0030</td>
+<td>
+<span style="
+    color:white;
+    background:#f59e0b;
+    padding:4px 8px;
+    border-radius:5px;
+">
+ADVERTENCIA
+</span>
+</td>
+<td>Facultad de Psicologia</td>
+<td><a href="PDR-3399945398.html">3399945398</a></td>
+<td>Xerox VersaLink B7030</td>
+<td>Toner Black</td>
+<td>106R03392</td>
+<td>18%</td>
+<td>21-09-2026 12:00:50</td>
+<td>-</td>
+</tr>
+
+
+</tbody>
+
+</table>
+
+</div>
+
+<script>
+
+const buscar =
+    document.getElementById("buscar");
+
+buscar.addEventListener(
+    "keyup",
+    function() {
+
+        const filtro =
+            this.value.toLowerCase();
+
+        document
+            .querySelectorAll(
+                "#tabla tbody tr"
+            )
+            .forEach(fila => {
+
+                fila.style.display =
+                    fila.textContent
+                    .toLowerCase()
+                    .includes(filtro)
+                    ? ""
+                    : "none";
+
+            });
+
+    }
+);
+
+let columnaActual = -1;
+let ascendente = true;
+
+function ordenarTabla(columna)
+{
+    const tbody =
+        document.querySelector(
+            "#tabla tbody"
+        );
+
+    const filas =
+        Array.from(
+            tbody.querySelectorAll("tr")
+        );
+
+    if (columnaActual === columna)
+    {
+        ascendente = !ascendente;
+    }
+    else
+    {
+        columnaActual = columna;
+        ascendente = true;
+    }
+
+    filas.sort((a, b) => {
+
+        let aVal =
+            a.cells[columna]
+            .innerText
+            .trim();
+
+        let bVal =
+            b.cells[columna]
+            .innerText
+            .trim();
+
+        const aNum =
+            parseFloat(
+                aVal.replace("%", "")
+            );
+
+        const bNum =
+            parseFloat(
+                bVal.replace("%", "")
+            );
+
+        if (
+            !isNaN(aNum)
+            &&
+            !isNaN(bNum)
+        )
+        {
+            return ascendente
+                ? aNum - bNum
+                : bNum - aNum;
+        }
+
+        return ascendente
+            ? aVal.localeCompare(
+                bVal,
+                undefined,
+                {numeric:true}
+            )
+            : bVal.localeCompare(
+                aVal,
+                undefined,
+                {numeric:true}
+            );
+
+    });
+
+    tbody.innerHTML = "";
+
+    filas.forEach(
+        fila =>
+        tbody.appendChild(fila)
+    );
+}
+
+</script>
+
+
+</body>
+
+</html>

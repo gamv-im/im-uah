@@ -1,0 +1,999 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="utf-8">
+
+<title>PDR - DARA-ADMISION</title>
+
+<style>
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fa;
+    margin: 0;
+}
+
+header {
+    background: #2563eb;
+    color: white;
+    padding: 15px 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+
+.barra {
+    width: 250px;
+    height: 18px;
+    background: #e5e7eb;
+    border-radius: 10px;
+    overflow: hidden;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.relleno {
+    height: 100%;
+    background: #38bdf8;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+th {
+    background: #f3f4f6;
+    text-align: left;
+}
+
+.navegacion {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+.btn-nav {
+    display: inline-block;
+    padding: 10px 15px;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.btn-nav:hover {
+    background: #1d4ed8;
+}
+
+.btn-nav:visited {
+    color: white;
+}
+
+.nav-header {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.nav-header a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    border: 1px solid rgba(255,255,255,.4);
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.nav-header a:hover {
+    background: rgba(255,255,255,.15);
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>PDR - DARA-ADMISION</h1>
+
+<div class="nav-header">
+
+<a href="index.html">🏠 Inicio</a>
+
+<a href="inventario.html">🖨️ Inventario</a>
+
+<a href="alertas.html">⚠️ Alertas</a>
+
+<a href="instalaciones.html">🔧 Instalaciones</a>
+
+</div>
+
+</header>
+
+
+<div class="container">
+
+<div class="card">
+
+<h2>Información General</h2>
+
+<table>
+
+<tr>
+<th>Serie</th>
+<td>3353215298</td>
+</tr>
+
+<tr>
+<th>Modelo</th>
+<td>Xerox WorkCentre 3655X v1</td>
+</tr>
+
+<tr>
+<th>IP</th>
+<td>172.16.79.56</td>
+</tr>
+    
+<tr>
+<th>Estado</th>
+<td>🔴 Offline</td>
+</tr>
+
+<tr>
+<th>Última lectura</th>
+<td>21-09-2026 13:59:13</td>
+</tr>
+
+</table>
+
+</div>
+
+<div class="card">
+
+<h2>Contadores</h2>
+
+<table>
+
+<tr>
+<th>Negro</th>
+<td>121.709</td>
+</tr>
+
+<tr>
+<th>Color</th>
+<td>-</td>
+</tr>
+
+<tr>
+<th>Total</th>
+<td>121.709</td>
+</tr>
+
+</table>
+
+</div>
+
+<div class="card">
+
+<h2>Consumibles Actuales</h2>
+
+<table>
+
+<tr>
+<th>Consumible</th>
+<th>PN</th>
+<th>Nivel</th>
+</tr>
+
+
+<tr>
+<th colspan="3"
+    style="
+        background:#2563eb;
+        color:white;
+        text-align:left;
+    ">
+    TONERS
+</th>
+</tr>
+
+            <tr>
+
+                <td>Toner Black</td>
+
+                <td>-</td>
+
+                <td>
+
+                <div class="barra">
+
+                <div
+                    class="relleno"
+                    style="width:28%"
+                ></div>
+
+                </div>
+
+                <span>28%</span>
+
+                </td>
+
+                </tr>
+            
+
+</table>
+
+</div>
+
+<div class="card">
+
+<h2>Historial de Alertas</h2>
+
+<table>
+
+<tr>
+<th>Código</th>
+<th>Tipo</th>
+<th>Consumible</th>
+<th>PN</th>
+<th>Nivel</th>
+<th>Fecha</th>
+<th>Estado</th>
+</tr>
+
+
+<tr>
+<td colspan="6" style="text-align:center;color:#666;">
+No existen alertas registradas.
+</td>
+</tr>
+
+
+</table>
+
+</div>
+
+<div class="card">
+
+<h2>Historial de Instalaciones</h2>
+
+<table>
+
+<tr>
+<th>Código</th>
+<th>Consumible</th>
+<th>PN</th>
+<th>Antes</th>
+<th>Después</th>
+<th>Incremento</th>
+<th>Fecha</th>
+</tr>
+
+
+<tr>
+<td colspan="7" style="text-align:center;color:#666;">
+No existen instalaciones registradas.
+</td>
+</tr>
+
+
+</table>
+
+</div>
+
+
+<div class="card">
+
+<h2>
+📈 Evolución Toner Black
+</h2>
+
+<svg
+    width="100%"
+    height="300"
+    viewBox="0 0 1000 300"
+>
+
+
+<line
+    x1="70"
+    y1="30.0"
+    x2="970"
+    y2="30.0"
+    stroke="#e5e7eb"
+/>
+
+<text
+    x="60"
+    y="34.0"
+    text-anchor="end"
+    font-size="11"
+    fill="#666"
+>
+100%
+</text>
+
+<line
+    x1="70"
+    y1="85.0"
+    x2="970"
+    y2="85.0"
+    stroke="#e5e7eb"
+/>
+
+<text
+    x="60"
+    y="89.0"
+    text-anchor="end"
+    font-size="11"
+    fill="#666"
+>
+75%
+</text>
+
+<line
+    x1="70"
+    y1="140.0"
+    x2="970"
+    y2="140.0"
+    stroke="#e5e7eb"
+/>
+
+<text
+    x="60"
+    y="144.0"
+    text-anchor="end"
+    font-size="11"
+    fill="#666"
+>
+50%
+</text>
+
+<line
+    x1="70"
+    y1="195.0"
+    x2="970"
+    y2="195.0"
+    stroke="#e5e7eb"
+/>
+
+<text
+    x="60"
+    y="199.0"
+    text-anchor="end"
+    font-size="11"
+    fill="#666"
+>
+25%
+</text>
+
+<line
+    x1="70"
+    y1="250.0"
+    x2="970"
+    y2="250.0"
+    stroke="#e5e7eb"
+/>
+
+<text
+    x="60"
+    y="254.0"
+    text-anchor="end"
+    font-size="11"
+    fill="#666"
+>
+0%
+</text>
+
+
+<line
+    x1="70"
+    y1="30"
+    x2="70"
+    y2="250"
+    stroke="#999"
+/>
+
+<line
+    x1="70"
+    y1="250"
+    x2="970"
+    y2="250"
+    stroke="#999"
+/>
+
+<polyline
+    points="70.0,188.4 117.36842105263159,188.4 164.73684210526318,188.4 212.10526315789474,188.4 259.47368421052636,188.4 306.8421052631579,188.4 354.2105263157895,188.4 401.5789473684211,188.4 448.94736842105266,188.4 496.3157894736842,188.4 543.6842105263158,188.4 591.0526315789474,188.4 638.421052631579,188.4 685.7894736842105,188.4 733.1578947368422,188.4 780.5263157894738,188.4 827.8947368421053,188.4 875.2631578947369,188.4 922.6315789473684,188.4 970.0000000000001,188.4"
+    fill="none"
+    stroke="#2563eb"
+    stroke-width="3"
+/>
+
+
+<circle
+    cx="70.0"
+    cy="188.4"
+    r="4"
+    fill="#2563eb"
+/>
+
+<text
+    x="70.0"
+    y="178.4"
+    text-anchor="middle"
+    font-size="12"
+    fill="#111"
+>
+28%
+</text>
+
+<text
+    x="70.0"
+    y="285"
+    text-anchor="middle"
+    font-size="11"
+    fill="#666"
+>
+13/09
+</text>
+
+<circle
+    cx="117.36842105263159"
+    cy="188.4"
+    r="4"
+    fill="#2563eb"
+/>
+
+<text
+    x="117.36842105263159"
+    y="178.4"
+    text-anchor="middle"
+    font-size="12"
+    fill="#111"
+>
+28%
+</text>
+
+<text
+    x="117.36842105263159"
+    y="285"
+    text-anchor="middle"
+    font-size="11"
+    fill="#666"
+>
+14/09
+</text>
+
+<circle
+    cx="164.73684210526318"
+    cy="188.4"
+    r="4"
+    fill="#2563eb"
+/>
+
+<text
+    x="164.73684210526318"
+    y="178.4"
+    text-anchor="middle"
+    font-size="12"
+    fill="#111"
+>
+28%
+</text>
+
+<text
+    x="164.73684210526318"
+    y="285"
+    text-anchor="middle"
+    font-size="11"
+    fill="#666"
+>
+14/09
+</text>
+
+<circle
+    cx="212.10526315789474"
+    cy="188.4"
+    r="4"
+    fill="#2563eb"
+/>
+
+<text
+    x="212.10526315789474"
+    y="178.4"
+    text-anchor="middle"
+    font-size="12"
+    fill="#111"
+>
+28%
+</text>
+
+<text
+    x="212.10526315789474"
+    y="285"
+    text-anchor="middle"
+    font-size="11"
+    fill="#666"
+>
+15/09
+</text>
+
+<circle
+    cx="259.47368421052636"
+    cy="188.4"
+    r="4"
+    fill="#2563eb"
+/>
+
+<text
+    x="259.47368421052636"
+    y="178.4"
+    text-anchor="middle"
+    font-size="12"
+    fill="#111"
+>
+28%
+</text>
+
+<text
+    x="259.47368421052636"
+    y="285"
+    text-anchor="middle"
+    font-size="11"
+    fill="#666"
+>
+15/09
+</text>
+
+<circle
+    cx="306.8421052631579"
+    cy="188.4"
+    r="4"
+    fill="#2563eb"
+/>
+
+<text
+    x="306.8421052631579"
+    y="178.4"
+    text-anchor="middle"
+    font-size="12"
+    fill="#111"
+>
+28%
+</text>
+
+<text
+    x="306.8421052631579"
+    y="285"
+    text-anchor="middle"
+    font-size="11"
+    fill="#666"
+>
+16/09
+</text>
+
+<circle
+    cx="354.2105263157895"
+    cy="188.4"
+    r="4"
+    fill="#2563eb"
+/>
+
+<text
+    x="354.2105263157895"
+    y="178.4"
+    text-anchor="middle"
+    font-size="12"
+    fill="#111"
+>
+28%
+</text>
+
+<text
+    x="354.2105263157895"
+    y="285"
+    text-anchor="middle"
+    font-size="11"
+    fill="#666"
+>
+16/09
+</text>
+
+<circle
+    cx="401.5789473684211"
+    cy="188.4"
+    r="4"
+    fill="#2563eb"
+/>
+
+<text
+    x="401.5789473684211"
+    y="178.4"
+    text-anchor="middle"
+    font-size="12"
+    fill="#111"
+>
+28%
+</text>
+
+<text
+    x="401.5789473684211"
+    y="285"
+    text-anchor="middle"
+    font-size="11"
+    fill="#666"
+>
+17/09
+</text>
+
+<circle
+    cx="448.94736842105266"
+    cy="188.4"
+    r="4"
+    fill="#2563eb"
+/>
+
+<text
+    x="448.94736842105266"
+    y="178.4"
+    text-anchor="middle"
+    font-size="12"
+    fill="#111"
+>
+28%
+</text>
+
+<text
+    x="448.94736842105266"
+    y="285"
+    text-anchor="middle"
+    font-size="11"
+    fill="#666"
+>
+17/09
+</text>
+
+<circle
+    cx="496.3157894736842"
+    cy="188.4"
+    r="4"
+    fill="#2563eb"
+/>
+
+<text
+    x="496.3157894736842"
+    y="178.4"
+    text-anchor="middle"
+    font-size="12"
+    fill="#111"
+>
+28%
+</text>
+
+<text
+    x="496.3157894736842"
+    y="285"
+    text-anchor="middle"
+    font-size="11"
+    fill="#666"
+>
+17/09
+</text>
+
+<circle
+    cx="543.6842105263158"
+    cy="188.4"
+    r="4"
+    fill="#2563eb"
+/>
+
+<text
+    x="543.6842105263158"
+    y="178.4"
+    text-anchor="middle"
+    font-size="12"
+    fill="#111"
+>
+28%
+</text>
+
+<text
+    x="543.6842105263158"
+    y="285"
+    text-anchor="middle"
+    font-size="11"
+    fill="#666"
+>
+18/09
+</text>
+
+<circle
+    cx="591.0526315789474"
+    cy="188.4"
+    r="4"
+    fill="#2563eb"
+/>
+
+<text
+    x="591.0526315789474"
+    y="178.4"
+    text-anchor="middle"
+    font-size="12"
+    fill="#111"
+>
+28%
+</text>
+
+<text
+    x="591.0526315789474"
+    y="285"
+    text-anchor="middle"
+    font-size="11"
+    fill="#666"
+>
+18/09
+</text>
+
+<circle
+    cx="638.421052631579"
+    cy="188.4"
+    r="4"
+    fill="#2563eb"
+/>
+
+<text
+    x="638.421052631579"
+    y="178.4"
+    text-anchor="middle"
+    font-size="12"
+    fill="#111"
+>
+28%
+</text>
+
+<text
+    x="638.421052631579"
+    y="285"
+    text-anchor="middle"
+    font-size="11"
+    fill="#666"
+>
+18/09
+</text>
+
+<circle
+    cx="685.7894736842105"
+    cy="188.4"
+    r="4"
+    fill="#2563eb"
+/>
+
+<text
+    x="685.7894736842105"
+    y="178.4"
+    text-anchor="middle"
+    font-size="12"
+    fill="#111"
+>
+28%
+</text>
+
+<text
+    x="685.7894736842105"
+    y="285"
+    text-anchor="middle"
+    font-size="11"
+    fill="#666"
+>
+19/09
+</text>
+
+<circle
+    cx="733.1578947368422"
+    cy="188.4"
+    r="4"
+    fill="#2563eb"
+/>
+
+<text
+    x="733.1578947368422"
+    y="178.4"
+    text-anchor="middle"
+    font-size="12"
+    fill="#111"
+>
+28%
+</text>
+
+<text
+    x="733.1578947368422"
+    y="285"
+    text-anchor="middle"
+    font-size="11"
+    fill="#666"
+>
+19/09
+</text>
+
+<circle
+    cx="780.5263157894738"
+    cy="188.4"
+    r="4"
+    fill="#2563eb"
+/>
+
+<text
+    x="780.5263157894738"
+    y="178.4"
+    text-anchor="middle"
+    font-size="12"
+    fill="#111"
+>
+28%
+</text>
+
+<text
+    x="780.5263157894738"
+    y="285"
+    text-anchor="middle"
+    font-size="11"
+    fill="#666"
+>
+19/09
+</text>
+
+<circle
+    cx="827.8947368421053"
+    cy="188.4"
+    r="4"
+    fill="#2563eb"
+/>
+
+<text
+    x="827.8947368421053"
+    y="178.4"
+    text-anchor="middle"
+    font-size="12"
+    fill="#111"
+>
+28%
+</text>
+
+<text
+    x="827.8947368421053"
+    y="285"
+    text-anchor="middle"
+    font-size="11"
+    fill="#666"
+>
+20/09
+</text>
+
+<circle
+    cx="875.2631578947369"
+    cy="188.4"
+    r="4"
+    fill="#2563eb"
+/>
+
+<text
+    x="875.2631578947369"
+    y="178.4"
+    text-anchor="middle"
+    font-size="12"
+    fill="#111"
+>
+28%
+</text>
+
+<text
+    x="875.2631578947369"
+    y="285"
+    text-anchor="middle"
+    font-size="11"
+    fill="#666"
+>
+20/09
+</text>
+
+<circle
+    cx="922.6315789473684"
+    cy="188.4"
+    r="4"
+    fill="#2563eb"
+/>
+
+<text
+    x="922.6315789473684"
+    y="178.4"
+    text-anchor="middle"
+    font-size="12"
+    fill="#111"
+>
+28%
+</text>
+
+<text
+    x="922.6315789473684"
+    y="285"
+    text-anchor="middle"
+    font-size="11"
+    fill="#666"
+>
+20/09
+</text>
+
+<circle
+    cx="970.0000000000001"
+    cy="188.4"
+    r="4"
+    fill="#2563eb"
+/>
+
+<text
+    x="970.0000000000001"
+    y="178.4"
+    text-anchor="middle"
+    font-size="12"
+    fill="#111"
+>
+28%
+</text>
+
+<text
+    x="970.0000000000001"
+    y="285"
+    text-anchor="middle"
+    font-size="11"
+    fill="#666"
+>
+21/09
+</text>
+
+
+
+
+</svg>
+
+</div>
+
+
+
+</div>
+
+</body>
+
+</html>
