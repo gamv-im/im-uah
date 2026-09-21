@@ -1,0 +1,22 @@
+{
+  "Xerox VersaLink B400": {
+    "toner_black": {
+      "pn": "106R03585"
+    }
+  },
+  "Xerox VersaLink B405": {
+    "toner_black": {
+      "pn": "106R03585"
+    }
+  },
+  "Xerox Phaser 3330": {
+    "toner_black": {
+      "pn": "106R03625"
+    }
+  },
+  "Xerox Phaser 3330": {
+    "Drum _black": {
+      "pn": "101R00555"
+    }  
+  }
+}

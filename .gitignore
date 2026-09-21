@@ -1,0 +1,14 @@
+.evn
+__pycache__/
+data/*
+!data/catalogo_manual.json
+logs/
+build/
+dist/
+*.spec
+modules/
+templates/
+main.py
+walk.py
+requirements.txt
+publicar.bat
