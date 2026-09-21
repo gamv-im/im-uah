@@ -9,6 +9,7 @@ dist/
 modules/
 templates/
 main.py
+IM-V2.exe
 walk.py
 requirements.txt
 publicar.bat
