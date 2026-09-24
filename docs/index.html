@@ -78,7 +78,7 @@ header {
     display:grid;
 
     grid-template-columns:
-        repeat(4,1fr);
+        repeat(3,1fr);
 
     gap:25px;
 }
@@ -258,6 +258,42 @@ header {
     color:#666;
 }
 
+.btn-admin {
+
+    position: fixed;
+
+    bottom: 25px;
+
+    right: 25px;
+
+    background: #374151;
+
+    color: white;
+
+    text-decoration: none;
+
+    padding: 14px 20px;
+
+    border-radius: 12px;
+
+    font-weight: bold;
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,.15);
+
+    transition: .2s;
+
+    z-index: 999;
+}
+
+.btn-admin:hover {
+
+    background: #1f2937;
+
+    transform:
+        translateY(-2px);
+}
+
 </style>
 
 </head>
@@ -348,23 +384,6 @@ Historial de cambios e instalaciones.
 </a>
 </div>
 
-<div class="card">
-<a href="reportes.html">
-
-<div class="card-icon">
-📊
-</div>
-
-<h2 class="morado">
-Reportes
-</h2>
-
-<p>
-Estadísticas y análisis del parque.
-</p>
-
-</a>
-</div>
 
 </div>
 
@@ -445,7 +464,7 @@ Instalaciones Registradas
 </div>
 
 <div class="fecha-hora">
-23:02:00
+23:26:46
 </div>
 
 </div>
@@ -499,6 +518,14 @@ Generado por GAMV
 </div>
 
 </div>
+
+<a
+    href="https://gamv-im.github.io/monitor"
+    target="_blank"
+    class="btn-admin"
+>
+⚙️ Adm General
+</a>
 
 </body>
 
