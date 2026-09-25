@@ -1,0 +1,14 @@
+{
+    "habilitado": true,
+
+    "destinatarios": [
+        "rhernandez@cynersis.cl",
+        "aperez@cynersis.cl"
+    ],
+
+    "eventos": {
+        "advertencia": false,
+        "alerta": true,
+        "instalacion": true
+    }
+}
